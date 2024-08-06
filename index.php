@@ -18,6 +18,7 @@
     header('Location: /e-commerce-app/index.php?page=home');
     exit();
   }
+  
   require ('widgets/header.php');
 
   if (isset($_GET['page'])) {

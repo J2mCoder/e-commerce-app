@@ -35,16 +35,6 @@
     Sunt, suscipit ullam. Ipsam necessitatibus numquam est consectetur ipsa, totam beatae. Quibusdam, eum, suscipit
     atque vel corrupti nisi a natus repudiandae consectetur harum aspernatur inventore veniam iusto molestiae enim non?
     Officia quaerat ipsam voluptatem doloremque odio, recusandae perspiciatis modi magni eos obcaecati in corrupti
-    dolore odit, dicta tenetur quas porro ea. Modi aperiam hic cumque nostrum earum, iste voluptate adipisci!
-    Inventore voluptate reiciendis dolorem. Vitae non aut illum quae ab, fuga et fugit quis id praesentium voluptatibus
-    nam quaerat labore, assumenda nobis officiis. Qui, veritatis eum cupiditate excepturi nostrum harum!
-    Sapiente, reprehenderit? Architecto ea sint deleniti, repudiandae eveniet vel incidunt nesciunt magni ipsa officia
-    labore impedit quod corporis natus? Dolorem, voluptatum libero. Obcaecati blanditiis incidunt veniam non modi
-    suscipit. Earum.
-    Error cumque, perspiciatis veniam harum amet nostrum saepe? Optio ea deserunt dolores nesciunt asperiores? Ratione
-    qui non deserunt quis minus. Unde iste ad, quia totam natus quis accusamus? Dignissimos, quasi.
-    Totam amet animi dolorem quasi nam dolor nostrum odio porro. Temporibus repellat animi sed repellendus! Eveniet
-    necessitatibus quisquam vero cumque doloribus suscipit corporis quam placeat nesciunt odit expedita, ducimus
-    voluptatibus.
+    404
   </div>
 </section>

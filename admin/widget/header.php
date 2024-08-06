@@ -4,8 +4,8 @@
       <div class="logo"><a href="">E-Shop</a></div>
       <div class="nav-links">
         <ul>
-          <li><a href="/e-commerce-app/index.php?page=home#Accueil">Accueil</a></li>
-          <li><a href="/e-commerce-app/index.php?page=home#Boutique">Boutique</a></li>
+          <li><a href="index.php?page=home">Accueil</a></li>
+          <li><a href="/e-commerce-app/index.php?page=home">Boutique</a></li>
           <li><a href="/e-commerce-app/index.php?page=home#Promotion">Promotion</a></li>
           <li><a href="/e-commerce-app/index.php?page=home#Marque">Marque</a></li>
           <li><a href="/e-commerce-app/index.php?page=home#Contact">Contact</a></li>
@@ -13,7 +13,7 @@
       </div>
       <div class="nav-icons">
         <ul>
-          <li><a href="index.php?page=profile"><i class="fa-solid fa-user"></i></a></li>
+          <li><a href="?page=profil"><i class="fa-solid fa-user"></i></a></li>
         </ul>
       </div>
       <div class="burger-menu">

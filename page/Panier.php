@@ -1,10 +1,22 @@
 <?php
-require("db/connect_db.php");
+require ("db/connect_db.php");
 $ErrorMsg = null;
 $total = 0;
 if (!isset($_SESSION['panier'])) {
   $ErrorMsg = "Le panier est vide";
 }
+
+if (isset($_GET["unset"])) {
+  $id = $_GET["unset"];
+
+  if (isset($_SESSION['panier'][$id])) {
+    unset($_SESSION['panier'][$id]);
+  }
+
+  header("Location: index.php?page=panier");
+  exit();
+}
+
 ?>
 <section class="section-panier">
   <div class="container">
@@ -37,27 +49,26 @@ if (!isset($_SESSION['panier'])) {
                     $row = $result->fetch();
                     if ($row) {
                       $subtotal = $row['prix'] * $quantity;
-                      $total += $subtotal; 
-              ?>
-              <tr>
-                <td><?php echo $i+1;?></td>
-                <td>
-                  <img src="<?php echo $row['image']; ?>" height="50" width="50" alt="">
-                </td>
-                <td>Produit <?php echo $row['produit']; ?></td>
-                <td><?php echo $row['prix'] . '$'; ?></td>
-                <td>
-                  <input type="number" min="1" max="3" value="<?php echo $quantity; ?>">
-                </td>
-                <td><?php echo $subtotal . '$'; ?></td>
-                <td>
-                  <a href="#" title="Supprimer" class="delete">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </a>
-                </td>
-              </tr>
-              <?php
-                    } else {
+                      $total += $subtotal;
+                      ?>
+                      <tr>
+                        <td><?php echo $i + 1; ?></td>
+                        <td>
+                          <img src="<?php echo $row['image']; ?>" height="50" width="50" alt="">
+                        </td>
+                        <td>Produit <?php echo $row['produit']; ?></td>
+                        <td><?php echo $row['prix'] . '$'; ?></td>
+                        <td>
+                          <input type="number" min="1" max="3" value="<?php echo $quantity; ?>">
+                        </td>
+                        <td><?php echo $subtotal . '$'; ?></td>
+                        <td>
+                          <a href="index.php?page=panier&unset=<?php echo $row['url']; ?>" title="Supprimer" class="delete">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                          </a>
+                        </td>
+                      </tr>
+                    <?php } else {
                       $ErrorMsg = "Produit non trouvé pour l'ID $id";
                     }
                   } else {
@@ -90,4 +101,6 @@ if (!isset($_SESSION['panier'])) {
     </div>
   </div>
 </section>
-<?php if ($ErrorMsg) { echo "<p>Error: $ErrorMsg</p>"; } ?>
+<?php if ($ErrorMsg) {
+  echo "<p>Error: $ErrorMsg</p>";
+} ?>

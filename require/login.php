@@ -2,7 +2,7 @@
 require ("db/connect_db.php");
 $ErrorMsg = null;
 
-if (isset($_SESSION["USER"])) {
+if (isset($_SESSION["USER"]) || isset($_SESSION["ADMIN"])) {
   header("Location: index.php?page=home");
   exit();
 }
@@ -22,6 +22,7 @@ if (isset($_POST["submit-login"])) {
       $ADMIN = $REQ_ADMIN->fetch();
       if (password_verify($password, $ADMIN["password"])) {
         $_SESSION["ADMIN"] = $ADMIN["url"];
+        setcookie("ArchivisteID", $ADMIN["url"], time() + 6 * 30 * 24 * 60 * 60, "/");
         header("Location: /e-commerce-app/admin/index.php");
         exit();
       } else {
@@ -35,6 +36,7 @@ if (isset($_POST["submit-login"])) {
       $USER = $REQ_USER->fetch();
       if (password_verify($password, $USER["password"])) {
         $_SESSION["USER"] = $USER["url"];
+        setcookie("ArchivisteID", $USER["url"], time() + 6 * 30 * 24 * 60 * 60, "/");
         header("Location: index.php?page=home");
         exit();
       } else {
